@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-export default function Home() {
+export default function Test() {
     const ref = useRef()
 
     const test = [
