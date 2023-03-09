@@ -1,13 +1,13 @@
 import './App.css';
 import Loading from './pages/Loading';
 import Navbar from './pages/Navbar';
-import Test from './pages/Test';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className=''> 
         <Navbar></Navbar>
-        <Test></Test>
+        <Home></Home>
         <Loading></Loading>
     </div>
   );
