@@ -58,12 +58,12 @@ export default function Home() {
                     <div >
                      
                         {test.map((res, key) =>
-                            <div key={key} id="rs" className=' gap-x-3 px-3 md:gap-x-8 md:w-[900px] md:h-[400px] shadow-2xl  rounded-lg  flex items-center justify-center  absolute md:top-[45px] md:left-[160px] transition-opacity opacity-0 duration-1000 ease-linear'>
+                            <div key={key} id="rs" className='px-3 gap-x-8 w-[900px] h-[400px] shadow-2xl  rounded-lg  flex items-center justify-center  absolute top-[45px] left-[160px] transition-opacity opacity-0 duration-1000 ease-linear'>
 
-                                <img className='md:px-5 h-56 w-56 md:h-[250px] md:w-[400px] rounded-full' src={res.url} ></img>
-                                <div className=' py-10 md:pt-28'>
+                                <img className='px-5 h-[250px] w-[400px] rounded-full' src={res.url} ></img>
+                                <div className=' py-10 pt-28'>
                                     <div>{res.star}</div>
-                                    <div className='md:w-[400px] md:h-[300px]'>
+                                    <div className='w-[400px] h-[300px]'>
                                         <h1 className='font-semibold'>{res.name}</h1>
                                         <p>{res.p}</p>
                                         
