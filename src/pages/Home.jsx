@@ -20,7 +20,7 @@ export default function Home() {
             url: "https://c4.wallpaperflare.com/wallpaper/838/731/651/baby-groot-5k-hd-4k-wallpaper-preview.jpg",
             name: "kullanıcı 3",
             star: "*****",
-            p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias non error unde architecto aspernatur maiores vitae nostrum, harum exercitationem tempora repellat nihil natus omnis atque quisquam magnam excepturi reiciendis culpa.Lorem ipsum dolor sit amet consectetur, adipisicing elit. "
+            p: " adipisicing elit. Molestias non error unde architecto aspernatur maiores vitae nostrum, harum exercitationem tempora repellat nihil natus omnis atque quisquam magnam excepturi reiciendis culpa.Lorem ipsum dolor sit amet consectetur, adipisicing elit. "
         }
     ]
 
@@ -53,17 +53,17 @@ export default function Home() {
                 <div className=' h-[1px] w-full  rounded-full bg-gray-300'></div>
 
             </div>
-            <div className='container mx-auto px-8'>
-                <div className='w-full h-[580px] relative' ref={ref}>
+            <div className='container  mx-auto px-8'>
+                <div className='w-full h-[580px] relative pt-20' ref={ref}>
                     <div >
                      
                         {test.map((res, key) =>
-                            <div key={key} id="rs" className=' gap-x-8 w-[900px] h-[400px] shadow-2xl  rounded-lg  flex items-center justify-center  absolute top-[45px] left-[160px] transition-opacity opacity-0 duration-1000 ease-linear'>
+                            <div key={key} id="rs" className=' gap-x-3 px-3 md:gap-x-8 md:w-[900px] md:h-[400px] shadow-2xl  rounded-lg  flex items-center justify-center  absolute md:top-[45px] md:left-[160px] transition-opacity opacity-0 duration-1000 ease-linear'>
 
-                                <img className='px-5 h-[250px] w-[400px] rounded-full' src={res.url} ></img>
-                                <div className='pt-28'>
+                                <img className='md:px-5 h-56 w-56 md:h-[250px] md:w-[400px] rounded-full' src={res.url} ></img>
+                                <div className=' py-10 md:pt-28'>
                                     <div>{res.star}</div>
-                                    <div className='w-[400px] h-[300px]'>
+                                    <div className='md:w-[400px] md:h-[300px]'>
                                         <h1 className='font-semibold'>{res.name}</h1>
                                         <p>{res.p}</p>
                                         
