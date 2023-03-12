@@ -1,7 +1,12 @@
+import { useWindowWidth } from '@react-hook/window-size';
+import classNames from 'classnames';
 import React, { useEffect, useRef } from 'react'
+
 
 export default function Home() {
     const ref = useRef()
+    const windowWith = useWindowWidth();
+
 
     const test = [
         {
@@ -20,7 +25,7 @@ export default function Home() {
             url: "https://c4.wallpaperflare.com/wallpaper/838/731/651/baby-groot-5k-hd-4k-wallpaper-preview.jpg",
             name: "kullanıcı 3",
             star: "*****",
-            p: " adipisicing elit. Molestias non error unde architecto aspernatur maiores vitae nostrum, harum exercitationem tempora repellat nihil natus omnis atque quisquam magnam excepturi reiciendis culpa.Lorem ipsum dolor sit amet consectetur, adipisicing elit. "
+            p: " adipisicing elit. Molestias non error unde architecto  harum exercitationem tempora repellat nihil natus omnis atque quisquam magnam excepturi reiciendis culpa.Lorem ipsum dolor sit amet consectetur, adipisicing elit. "
         }
     ]
 
@@ -35,7 +40,7 @@ export default function Home() {
             current = current === total - 1 ? 0 : current + 1;
         }
 
-        imageSlider()   
+        imageSlider()
         let interval = setInterval(imageSlider, 3000)
         return () => {
             clearInterval(interval)
@@ -46,30 +51,52 @@ export default function Home() {
     //console.log(test)
 
     return (
-        <div className=' h-full w-full bg-gradient-to-b  from-lime-600   to-lime-100 py-10 px-10'>
+        <div className=' h-full w-full  py-10 px-10'>
             <div className='flex items-center justify-center'>
                 <div className=' h-[1px] w-full bg-gray-300 rounded-full'></div>
                 <div className=' h-[5px] w-[10px]  mx-10 rounded-full bg-gray-300'></div>
                 <div className=' h-[1px] w-full  rounded-full bg-gray-300'></div>
 
             </div>
-            <div className='container  mx-auto px-8'>
-                <div className='w-full h-[580px] relative pt-20' ref={ref}>
+            <div className='container  mx-auto px-8 mt-10'>
+                <div className='w-full h-screen relative pt-20' ref={ref}>
                     <div >
-                     
                         {test.map((res, key) =>
-                            <div key={key} id="rs" className='px-3 gap-x-8 w-[900px] h-[400px] shadow-2xl  rounded-lg  flex items-center justify-center  absolute top-[45px] left-[160px] transition-opacity opacity-0 duration-1000 ease-linear'>
 
-                                <img className='px-5 h-[250px] w-[400px] rounded-full' src={res.url} ></img>
-                                <div className=' py-10 pt-28'>
-                                    <div>{res.star}</div>
-                                    <div className='w-[400px] h-[300px]'>
-                                        <h1 className='font-semibold'>{res.name}</h1>
-                                        <p>{res.p}</p>
-                                        
+                            <div key={key} id="rs" className={classNames({
+                                "shadow-2xl  rounded-lg flex items-center justify-center  absolute transition-opacity opacity-0 duration-1000 ease-linear": true,
+                                "px-3 gap-x-8 w-[900px] h-[400px]  top-[45px] left-[160px]": windowWith > 768,
+                                "top-0 -left-11 pt-3 px-3 h-96 gap-x-8 w-[300px]": windowWith <= 768
+                            })}>
+
+                                <img className={classNames({
+                                    "px-5 h-[250px] w-[400px] rounded-full": windowWith > 768,
+                                    "h-[150px]  w-[150px] -left-8 absolute rounded-r-full": windowWith <= 768
+                                })} src={res.url} ></img>
+                                <div className={classNames({
+                                    " py-10 pt-28": windowWith > 768,
+                                    "pt-2": windowWith <= 768
+                                })}>
+
+                                    <div className={classNames({
+                                        "w-[400px] h-[300px]": windowWith > 768,
+                                        "w-full  h-full flex  flex-col items-center": windowWith <= 768
+                                    })}>
+
+                                        <div className='pb-4  flex flex-col items-center'>
+                                            <div>{res.star}</div>
+                                            <h1 className='font-semibold'>{res.name}</h1>
+                                        </div>
+                                        <div>
+                                            <div className='w-[110px] h-[150px] float-left'></div>
+                                            <p>{res.p}</p>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
+
+
                         )}
                     </div>
                 </div>

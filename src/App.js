@@ -23,7 +23,7 @@ function App() {
   
   if(isLoading === true) {
     return (
-    <div className=''> 
+    <div className='bg-gradient-to-b  from-lime-600   to-lime-100'> 
         <Navbar></Navbar>
         <Home></Home>
         
