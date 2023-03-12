@@ -71,8 +71,8 @@ export default function Home() {
 
                                 <img className={classNames({
                                     "px-5 h-[250px] w-[400px] rounded-full": windowWith > 768,
-                                    "h-[150px]  max-w-[220px] -left-[32%] absolute rounded-r-full": windowWith <= 768,
-                                    "h-[150px]  max-w-[200px] top-[20%] -left-[32%] absolute rounded-r-full": windowWith <= 512
+                                    "h-auto  max-w-[220px] -left-[32%] absolute rounded-r-full": windowWith <= 768,
+                                    "h-auto  max-w-[200px]  -left-[32%] absolute rounded-r-full": windowWith <= 512
                                     
                                     
                                     })} src={res.url} ></img>
