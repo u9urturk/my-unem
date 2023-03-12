@@ -71,7 +71,11 @@ export default function Home() {
 
                                 <img className={classNames({
                                     "px-5 h-[250px] w-[400px] rounded-full": windowWith > 768,
-                                    "h-[150px]  max-w-[220px] -left-[32%] absolute rounded-r-full": windowWith <= 768                                })} src={res.url} ></img>
+                                    "h-[150px]  max-w-[220px] -left-[32%] absolute rounded-r-full": windowWith <= 768,
+                                    "h-[150px]  max-w-[200px] top-[20%] -left-[32%] absolute rounded-r-full": windowWith <= 512
+                                    
+                                    
+                                    })} src={res.url} ></img>
                                 <div className={classNames({
                                     " py-10 pt-28": windowWith > 768,
                                     "pt-2": windowWith <= 768
@@ -87,7 +91,7 @@ export default function Home() {
                                             <h1 className='font-semibold'>{res.name}</h1>
                                         </div>
                                         <div>
-                                            <div className='w-[110px] h-[150px] float-left'></div>
+                                            <div className=' w-[110px]  h-[150px] float-left'></div>
                                             <p>{res.p}</p>
                                         </div>
 
