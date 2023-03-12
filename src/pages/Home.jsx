@@ -33,7 +33,7 @@ export default function Home() {
         let images = ref.current.querySelectorAll("#rs"),
             total = images.length,
             current = 0
-        console.log(total)
+        //console.log(total)
         const imageSlider = () => {
             images[(current > 0 ? current : total) - 1].classList.add('opacity-0')
             images[current].classList.remove('opacity-0')
@@ -58,7 +58,7 @@ export default function Home() {
                 <div className=' h-[1px] w-full  rounded-full bg-gray-300'></div>
 
             </div>
-            <div className='container  mx-auto px-8 mt-10'>
+            <div className='container max-w-screen-xl  mx-auto px-8 md:mt-10'>
                 <div className='w-full h-screen relative pt-20' ref={ref}>
                     <div >
                         {test.map((res, key) =>
@@ -66,7 +66,7 @@ export default function Home() {
                             <div key={key} id="rs" className={classNames({
                                 "shadow-2xl  rounded-lg flex items-center justify-center  absolute transition-opacity opacity-0 duration-1000 ease-linear": true,
                                 "px-3 gap-x-8 w-[900px] h-[400px]  top-[45px] left-[160px]": windowWith > 768,
-                                "top-0 -left-11 pt-3 px-3 h-96 gap-x-8 w-[300px]": windowWith <= 768
+                                "px-3 inset-x-1/2 -translate-x-1/2 h-96 gap-x-8 w-[300px]": windowWith <= 768
                             })}>
 
                                 <img className={classNames({
