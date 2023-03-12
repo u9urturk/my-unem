@@ -58,21 +58,20 @@ export default function Home() {
                 <div className=' h-[1px] w-full  rounded-full bg-gray-300'></div>
 
             </div>
-            <div className='container max-w-screen-xl  mx-auto px-8 md:mt-10'>
-                <div className='w-full h-screen relative pt-20' ref={ref}>
+            <div className='container max-w-screen-xl   mx-auto px-8 md:mt-10'>
+                <div className='w-full h-screen relative  pt-20' ref={ref}>
                     <div >
                         {test.map((res, key) =>
 
                             <div key={key} id="rs" className={classNames({
                                 "shadow-2xl  rounded-lg flex items-center justify-center  absolute transition-opacity opacity-0 duration-1000 ease-linear": true,
                                 "px-3 gap-x-8 w-[900px] h-[400px]  top-[45px] left-[160px]": windowWith > 768,
-                                "px-3 inset-x-1/2 -translate-x-1/2 h-96 gap-x-8 w-[300px]": windowWith <= 768
+                                "px-3 inset-x-1/2 -translate-x-1/2 h-96 min-w-full": windowWith <= 768
                             })}>
 
                                 <img className={classNames({
                                     "px-5 h-[250px] w-[400px] rounded-full": windowWith > 768,
-                                    "h-[150px]  w-[150px] -left-8 absolute rounded-r-full": windowWith <= 768
-                                })} src={res.url} ></img>
+                                    "h-[150px]  max-w-[220px] -left-[32%] absolute rounded-r-full": windowWith <= 768                                })} src={res.url} ></img>
                                 <div className={classNames({
                                     " py-10 pt-28": windowWith > 768,
                                     "pt-2": windowWith <= 768

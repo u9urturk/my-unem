@@ -31,7 +31,7 @@ export default function Loading() {
   return (
     <div ref={ref} className="fixed flex items-center  bg-gradient-to-b  from-lime-600   to-lime-100 justify-center top-0 left-0 h-full w-full  backdrop-blur-sm text-orange-400 ">
       
-        <GiVacuumCleaner id='icon'  className='transition-all' size={150}></GiVacuumCleaner>
+        <GiVacuumCleaner id='icon'  className=' transition-all' size={100}></GiVacuumCleaner>
       
     </div>
   )
