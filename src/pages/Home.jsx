@@ -70,10 +70,9 @@ export default function Home() {
                             })}>
 
                                 <img className={classNames({
-                                    "px-5 h-[250px] w-[400px] rounded-full": windowWith > 768,
-                                    "h-[150px]  max-w-[220px] -left-[32%] absolute rounded-r-full": windowWith <= 768,
-                                    "h-[150px]  max-w-[120px] -left-[32%] absolute rounded-r-full": windowWith <= 512,
-                                    "h-[120px]  max-w-[120px] -left-[32%] absolute rounded-r-full": windowWith <= 375
+                                    "px-5 h-[250px] w-[400px]  rounded-full": windowWith > 768,
+                                    "max-h-[120px] opacity-40 w-[180px] -left-[32%] absolute rounded-r-full": windowWith <= 768,
+                                 
                                     
                                     
                                     })} src={res.url} ></img>
@@ -90,7 +89,7 @@ export default function Home() {
                                         <div className='pb-4  flex flex-col items-center'>
                                             <div>{res.star}</div>
                                             <h1 className='font-semibold'>{res.name}</h1>
-                                        </div>
+                                        </div>  
                                         <div>
                                             <div className=' w-[110px]  h-[150px] float-left'></div>
                                             <p className='font-thin text-sm'>{res.p}</p>

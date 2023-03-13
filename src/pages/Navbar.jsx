@@ -5,7 +5,7 @@ import { useWindowWidth } from '@react-hook/window-size';
 export default function Navbar() {
   const windowWith = useWindowWidth();
   return (
-    <div className='w-full h-12 flex justify-center md:justify-between pl-12 pr-12 items-centerbg-gradient-to-b  from-lime-600   to-[#6ea919] pt-10'>
+    <header className='w-max-[1400px] mx-auto  h-12 flex justify-center md:justify-between pl-12 pr-12 items-centerbg-gradient-to-b  from-lime-600   to-[#6ea919] pt-10'>
       <div className='flex transition-all justify-center gap-x-3 font-semibold items-center text-sm  text-gray-100 hover:cursor-pointer hover:text-orange-300  hover:text-lg'>
         <span><GiVacuumCleaner className='hover:rotate-180 transition-transform ' size={40}></GiVacuumCleaner></span>
         <h1 className='tracking-wide ' >ÜNEM KOLTUK YIKAMA</h1>
@@ -27,6 +27,6 @@ export default function Navbar() {
       </div>
       }
 
-    </div>
+    </header>
   )
 }

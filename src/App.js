@@ -23,7 +23,7 @@ function App() {
   
   if(isLoading === true) {
     return (
-    <div className='bg-gradient-to-b  from-lime-600   to-lime-100'> 
+    <div className='min-w-[300px] h-screen overflow-hidden  bg-gradient-to-b  from-lime-600   to-lime-100'> 
         <Navbar></Navbar>
         <Home></Home>
         
