@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Loading from './components/Loading';
 import { useEffect, useState } from 'react';
 import Comments from './pages/Comments';
+import Footer from './pages/Footer';
 
 function App() {
   const [isLoading, setisLoading] = useState(false)
@@ -28,6 +29,7 @@ function App() {
         <Navbar></Navbar>
         <Home></Home>
         <Comments></Comments>
+        <Footer></Footer>
     </div>
   )}else{
 

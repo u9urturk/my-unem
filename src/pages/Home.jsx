@@ -36,10 +36,10 @@ export default function Home() {
     }, [slideIndex])
     
     return (
-        <div className='max-w-[1000px] m-auto w-full h-screen py-10 px-10 relative'>
+        <div className='max-w-[1000px] m-auto w-full h-[400px] py-10 px-10 relative'>
             
             <div className='w-full max-h-96 h-full'>
-            <div  style={{backgroundImage:`url(${slides[slideIndex].url})`}} className='w-full mt-10 h-full  ml-1/2  rounded-2xl bg-center  bg-cover duration-700 '  >
+            <div  style={{backgroundImage:`url(${slides[slideIndex].url})`}}  className='w-full mt-10 h-full  ml-1/2  rounded-2xl bg-center  bg-cover duration-700  '  >
                 
                 </div>
             </div>
