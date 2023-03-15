@@ -56,20 +56,20 @@ export default function Navbar() {
       </div>
       <div onClick={()=>{setisActive(false)}} className={classNames({
         "hidden":isActive === false,
-        'fixed inset-0 bg-black bg-opacity-30 backdrop-blur-[2px] z-10  transition-all duration-1000 ease-in-out   flex items-center justify-center':isActive === true
+        'fixed inset-0 bg-black bg-opacity-30 backdrop-blur-[2px] z-10    flex items-center justify-center':isActive === true
       })}>
-        <div className='h-[300px] w-[200px] bg-orange-500 shadow-orange-300 opacity-95 rounded-3xl shadow-2xl flex flex-col gap-y-6 items-center justify-center '>
+        <div className='h-[300px] w-[250px] bg-orange-500 shadow-orange-300 opacity-95 rounded-3xl shadow-2xl flex flex-col gap-y-6 items-center justify-center '>
         <div>
-              <button className='hover:text-white hover:scale-125 w-[150px] shadow-md shadow-gray-200  rounded-xl px-10 py-2 bg-gradient-to-br from-green-600 to-green-200  tracking-wider transition-all'>İletişim</button>
+              <button className='hover:text-white hover:scale-125 w-[150px] shadow-md shadow-gray-200  rounded-xl px-10 py-2 bg-gradient-to-b from-green-600 to-green-300  tracking-wider transition-all'>İletişim</button>
             </div>
             <div>
-              <button className='hover:text-white hover:scale-125 w-[150px] shadow-md shadow-gray-200 rounded-xl px-10 py-2 bg-gradient-to-br from-green-600 to-green-200   tracking-wider transition-all'>Hakkında </button>
+              <button className='hover:text-white hover:scale-125 w-[150px] shadow-md shadow-gray-200 rounded-xl px-10 py-2 bg-gradient-to-b from-green-600 to-green-300   tracking-wider transition-all'>Hakkında </button>
             </div>
             <div>
-              <button className='hover:text-white hover:scale-125 w-[150px] shadow-md shadow-gray-200 rounded-xl px-10 py-2 bg-gradient-to-br from-green-600 to-green-200   tracking-wider transition-all'>Giriş Yap </button>
+              <button className='hover:text-white hover:scale-125 w-[150px] shadow-md shadow-gray-200 rounded-xl px-10 py-2 bg-gradient-to-b from-green-600 to-green-300   tracking-wider transition-all'>Giriş Yap </button>
             </div>
             <div>
-              <button className='hover:text-white hover:scale-125 w-[150px] shadow-md shadow-gray-200 rounded-xl px-10 py-2 bg-gradient-to-br from-green-600 to-green-200   tracking-wider transition-all'>Kayıt Ol </button>
+              <button className='hover:text-white hover:scale-125 w-[150px] shadow-md shadow-gray-200 rounded-xl px-10 py-2 bg-gradient-to-b from-green-600 to-green-300   tracking-wider transition-all'>Kayıt Ol </button>
             </div>
         </div>
       </div>
